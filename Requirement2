@@ -1,0 +1,18 @@
+def bubbleSort(arr):
+	    n = len(arr)
+	    for i in range(n):
+	        for j in range(0, n - i - 1):
+	
+
+	            if arr[j] > arr[j + 1]:
+	                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+	
+
+	arr = [1, 2 ,4 ,3]
+	#def TDD(n):
+	#    output = bubbleSort(n)
+	#    assert output == "1"
+	
+
+	#TDD(arr)
+	bubbleSort(arr)
