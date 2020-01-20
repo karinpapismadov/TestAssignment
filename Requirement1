@@ -1,0 +1,25 @@
+def BMI(weight , hight):
+	    return (weight / (hight*hight))
+	
+
+	def values_range(bmi):
+	    if bmi < 18.5:
+	        return "Underweight"
+	    if bmi >= 18.5 and bmi < 25:
+	        return "A proper weight"
+	    if bmi >= 25 and bmi <= 29.9:
+	        return "Overweight"
+	    if bmi >= 30 and bmi <= 34.9:
+	        return "Obesity stage 1"
+	    if bmi >= 35 and bmi <= 39.9 :
+	        return "Obesity stage 2"
+	    if bmi >= 40 :
+	        return "Obesity stage 3"
+	
+
+	print("Please enter your weight: \n")
+	weight = int(input())
+	print("Please enter your hight: \n")
+	hight = float(input())
+	BMI1=BMI(weight , hight)
+	print(values_range(BMI1))
