@@ -1,18 +1,23 @@
 def bubbleSort(arr):
-	    n = len(arr)
-	    for i in range(n):
-	        for j in range(0, n - i - 1):
-	
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
 
-	            if arr[j] > arr[j + 1]:
-	                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-	
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
 
-	arr = [1, 2 ,4 ,3]
-	#def TDD(n):
-	#    output = bubbleSort(n)
-	#    assert output == "1"
-	
+def system_test():
+    arr_one = [8,4,5,2,1,5,2,1]
+    arr_two = [7,4,5,5,6,6,3,9,8]
+    arr_three = [1,1,1,2,4,2,52,5]
 
-	#TDD(arr)
-	bubbleSort(arr)
+    solution_arr_one = [1,1,2,2,4,5,5,8]
+    solution_arr_two = [3,4,5,5,6,6,7,8,9]
+    solution_arr_three = [1,1,1,2,2,4,5,52]
+    if bubbleSort(arr_one) == solution_arr_one and bubbleSort(arr_two) == solution_arr_two and bubbleSort(arr_three) == solution_arr_three :
+        print("the test (TDD) pass with no errors")
+    else:
+        print("test faild")
+
+system_test()
